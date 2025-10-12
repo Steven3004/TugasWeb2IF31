@@ -1,0 +1,170 @@
+{
+	"info": {
+		"_postman_id": "c4c010ed-dd03-4102-a93b-fb472afaf7aa",
+		"name": "TugasWeb2IF31",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "48567270"
+	},
+	"item": [
+		{
+			"name": "Menambahkan Quote Baru",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"quote\": \"The only way to do great work is to love what you do.\",\r\n    \"author\": \"Steve Jobs\",\r\n    \"category\": \"Motivation\",\r\n    \"source\": \"Stanford Commencement Address\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/quotes",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"quotes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Menampilkan Semua Quote",
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/quotes",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"quotes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Menampilkan Satu Quote",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/quotes/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"quotes",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Memperbarui Quote",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"author\": \"Steve Jobs (Updated)\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/quotes/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"quotes",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Menghapus Quote",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"url": {
+					"raw": "http://127.0.0.1:8000/api/quotes/2",
+					"protocol": "http",
+					"host": [
+						"127",
+						"0",
+						"0",
+						"1"
+					],
+					"port": "8000",
+					"path": [
+						"api",
+						"quotes",
+						"2"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
